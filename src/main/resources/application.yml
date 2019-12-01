@@ -1,0 +1,11 @@
+user:
+  name: csyaonie
+  age: 26
+  map: {say: fuck,hello: you}
+  list: [1,2,3]
+  list2:
+    - 3
+    - 2
+    - 1
+
+address: 厦门市思明区侨岳里${random.int(10)}
