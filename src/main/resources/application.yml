@@ -9,3 +9,22 @@ user:
     - 1
 
 address: 厦门市思明区侨岳里${random.int(10)}
+
+spring:
+  freemarker:
+    request-context-attribute: request  #req访问request
+    suffix: .ftl  #后缀名
+    content-type: text/html
+    enabled: true
+    cache: false #缓存配置
+    template-loader-path: classpath:/templates/ #模板加载路径 按需配置
+    charset: UTF-8 #编码格式
+    settings:
+      number_format: '0.##'   #数字格式化，无小数点
+      default_encoding: UTF-8
+      output_encoding: UTF-8
+      url_escaping_charset: UTF-8
+      locale: zh_CN
+      datetime_format: yyyy-MM-dd HH:mm:ss
+      date_format: yyyy-MM-dd
+      time_format: HH:mm:ss
