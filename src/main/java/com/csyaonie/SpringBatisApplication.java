@@ -6,17 +6,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
-@RestController
-public class SpringbatisApplication {
-
-	@RequestMapping("hello")
-	public String hello(){
-		return "springboot hell world";
-	}
-
+public class SpringBatisApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringbatisApplication.class, args);
+		SpringApplication.run(SpringBatisApplication.class, args);
 	}
 
 }
