@@ -11,6 +11,23 @@ user:
 address: 厦门市思明区侨岳里${random.int(10)}
 
 spring:
+  datasource:
+    username: root
+    password: 111-kela
+    url: jdbc:mysql://139.224.2.0:3306/springboot?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      connectionTimeout: 30000
+      idleTimeout: 600000
+      maxLifetime: 30000
+      maximumPoolSize: 15
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
   freemarker:
     request-context-attribute: request  #req访问request
     suffix: .ftl  #后缀名
