@@ -4,6 +4,7 @@ import com.csyaonie.bean.Person;
 import com.csyaonie.service.PersonService;
 import com.csyaonie.service.PersonServiceIbatis;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -35,6 +36,7 @@ public class PersonController {
         return code;
     }
 
+    @CacheEvict
     @RequestMapping("findperson/{name}")
     public Person findPerson(@PathVariable("name") String name){
         Person person=personServiceIbatis.getPerson(name);
