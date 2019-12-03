@@ -10,6 +10,12 @@ user:
 
 address: 厦门市思明区侨岳里${random.int(10)}
 
+mail:
+  username: 123456
+  password: 123456
+  auth: 123456
+
+
 spring:
   datasource:
     username: root
