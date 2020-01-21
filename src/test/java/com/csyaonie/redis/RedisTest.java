@@ -1,7 +1,7 @@
 package com.csyaonie.redis;
 
 
-import com.csyaonie.SpringBatisApplication;
+import com.SpringBatisApplication;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +11,7 @@ import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringBootTest(classes={SpringBatisApplication.class})
+@SpringBootTest(classes = {SpringBatisApplication.class})
 public class RedisTest {
 
     @Autowired
@@ -21,16 +21,16 @@ public class RedisTest {
     private RedisTemplate redisTemplate;
 
     @Test
-    public void test1(){
+    public void test1() {
 
-        stringRedisTemplate.opsForValue().set("hello","world");
+        stringRedisTemplate.opsForValue().set("hello", "world");
 
     }
 
     @Test
-    public void test2(){
+    public void test2() {
 
-        String res=stringRedisTemplate.opsForValue().get("hello");
+        String res = stringRedisTemplate.opsForValue().get("hello");
         System.out.println(res);
 
     }

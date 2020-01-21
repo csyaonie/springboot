@@ -61,4 +61,4 @@ spring:
       datetime_format: yyyy-MM-dd HH:mm:ss
       date_format: yyyy-MM-dd
       time_format: HH:mm:ss
-debug: true
+debug: false

@@ -9,9 +9,9 @@ import java.util.Date;
 @Component
 public class SchedulingService {
 
-    private int count=0;
+    private int count = 0;
 
-    private static final SimpleDateFormat dateFormat=new SimpleDateFormat("HH:mm:ss");
+    private static final SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
 
 //    @Scheduled(cron="*/3 * * * * ?")
 //    private void process(){
@@ -31,7 +31,7 @@ public class SchedulingService {
 //    }
 
     @Scheduled(fixedDelay = 2000)
-    private void process2(){
+    private void process2() {
 
         try {
             Thread.sleep(1000);

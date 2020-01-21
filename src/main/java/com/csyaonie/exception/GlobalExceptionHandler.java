@@ -12,22 +12,22 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler({ArithmeticException.class})
     @ResponseBody
-    public Map<String,Object> handleArithmeticException(ArithmeticException e){
-        Map<String,Object> map=new HashMap<String,Object>();
+    public Map<String, Object> handleArithmeticException(ArithmeticException e) {
+        Map<String, Object> map = new HashMap<String, Object>();
         e.printStackTrace();
-        map.put("errorCode","201");
-        map.put("errorMsg","算数异常");
+        map.put("errorCode", "201");
+        map.put("errorMsg", "算数异常");
         return map;
     }
 
 
     @ExceptionHandler(Exception.class)
     @ResponseBody
-    public Map<String,Object> handleException(ArithmeticException e){
+    public Map<String, Object> handleException(ArithmeticException e) {
         e.printStackTrace();
-        Map<String,Object> map=new HashMap<String,Object>();
-        map.put("errorCode","101");
-        map.put("errorMsg","未知异常");
+        Map<String, Object> map = new HashMap<String, Object>();
+        map.put("errorCode", "101");
+        map.put("errorMsg", "未知异常");
         return map;
     }
 
