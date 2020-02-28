@@ -14,7 +14,11 @@ mail:
   username: 123456
   password: 123456
   auth: 123456
-
+# 日志配置
+logging:
+  level:
+    com.csyaonie: debug
+    org: error
 
 spring:
   datasource:
