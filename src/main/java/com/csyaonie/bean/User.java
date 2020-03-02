@@ -14,6 +14,7 @@ public class User {
     private Integer id;
     private String name;
     private String password;
+    private String salt;
     private Integer age;
     private Map<String,Object> map;
     private List<String> list;
@@ -73,5 +74,13 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getSalt() {
+        return salt;
+    }
+
+    public void setSalt(String salt) {
+        this.salt = salt;
     }
 }
