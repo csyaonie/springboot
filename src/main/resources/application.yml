@@ -1,3 +1,19 @@
+# 开发环境配置
+server:
+  # 服务器的HTTP端口，默认为80
+  port: 8080
+  servlet:
+    # 应用的访问路径
+    context-path: /
+  tomcat:
+    # tomcat的URI编码
+    uri-encoding: UTF-8
+    # tomcat最大线程数，默认为200
+    max-threads: 800
+    # Tomcat启动初始化的线程数，默认值25
+    min-spare-threads: 30
+
+
 user:
   name: csyaonie
   age: 26
@@ -48,11 +64,18 @@ spring:
     properties:
       hibernate:
         format_sql: true
+  # 模板引擎
+  thymeleaf:
+    mode: HTML
+    encoding: utf-8
+    # 禁用缓存
+    cache: false
+    enabled: true
   freemarker:
     request-context-attribute: request  #req访问request
     suffix: .ftl  #后缀名
     content-type: text/html
-    enabled: true
+    enabled: false
     cache: false #缓存配置
     template-loader-path: classpath:/templates/ #模板加载路径 按需配置
     charset: UTF-8 #编码格式
